@@ -38,3 +38,15 @@ def divide(engine):
 def add_str(engine):
     """add the top two numbers on the stack"""
     engine.push(engine.pop() + engine.pop())
+
+
+@register('*')
+def multiplication(engine):
+    """add the top two numbers on the stack"""
+    engine.push(engine.pop() * engine.pop())
+
+
+@register('neg')
+def negate(engine):
+    """negates the top number on the stack"""
+    engine.push(-engine.pop())
